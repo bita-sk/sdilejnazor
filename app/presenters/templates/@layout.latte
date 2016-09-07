@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+
+        <title>{ifset title}{include title|stripHtml} | {/ifset}Nette Web</title>
+        <link rel="stylesheet" href="{$basePath}/css/home.css">
+
+    </head>
+
+    <body>
+        <header>
+            <a n:href="Homepage:default">Sdílej názor</a>
+            <ul id="menu">
+                <li>Otázky</li>
+                <li>Diskuse</li>
+            </ul>
+        </header>
+        <div n:foreach="$flashes as $flash" n:class="flash, $flash->type">{$flash->message}</div>
+
+        {include content}
+
+        {block scripts}
+        <script src="https://nette.github.io/resources/js/netteForms.min.js"></script>
+        <script src="{$basePath}/js/jquery.js"></script>
+        <script src="{$basePath}/js/home.js"></script>
+        {/block}
+    </body>
+</html>

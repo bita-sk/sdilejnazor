@@ -1,0 +1,105 @@
+
+@font-face
+{
+    font-family: Roboto Bk;
+    src: url('../fonts/Roboto-Black.ttf');
+}
+
+@font-face
+{
+    font-family: Roboto Lt;
+    src: url('../fonts/Roboto-Light.ttf');
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    background-repeat: no-repeat;
+    background-image: url('/images/wallpaper.jpg');
+    background-size: cover;
+    background-position-y: -22%;
+}
+
+header a{
+    text-decoration: none;
+    color: white;
+}
+
+header{
+    position: fixed;
+    top:0;
+    width:100%;
+    font-size: 30pt;
+    font-family: Raleway;
+    color: white;
+    background: #CCCC33;
+    padding:10px 10px 10px 10px;
+}
+
+header #menu{
+    float: right;
+    margin-right: 30px;
+    margin-top: 10px;
+    font-size: 16pt;
+    font-family: Roboto Bk;
+}
+
+header #menu li{
+    cursor: pointer;
+    color: white;
+    display: inline-block;
+}
+
+header #menu li{
+    margin-right: 15px;
+}
+
+#question{
+    margin: 0 auto;
+    margin-top: 60px;
+    display: table;
+}
+
+.question_of_day{
+    display: inline-block;
+    text-align: center;
+    padding: 35px;
+    padding-bottom: 25px;
+    border: 2px solid #CCCC33;
+    color:black;
+    font-family: Roboto Lt;
+    font-size: 17pt;
+}
+.question_of_day_answer{
+    display: inline-block;
+}
+
+.fade_answer_form{
+    font-size: 14pt;
+    color: crimson;
+    font-weight: bold;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+#frm-answerForm{
+    margin: 0 auto;
+    display: table;
+    margin-top: 20px;
+}
+
+#frm-answerForm-answer{
+    width: 300px;
+    height: 80px;
+}
+
+#frm-answerForm input[type="submit"]{
+    border: none;
+    background: crimson;
+    color:white;
+    padding: 8px;
+    cursor: pointer;
+}
