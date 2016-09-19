@@ -10,6 +10,3 @@ application:
 session:
 	expiration: 14 days
 
-
-services:
-	router: App\RouterFactory::createRouter

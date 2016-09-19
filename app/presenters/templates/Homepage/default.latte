@@ -1,14 +1,33 @@
 {block content}
-{*<div class="day_question_title">Otázka dne</div>*}
+<div class="separator"></div>
+
+<ul id="tags">
+    <li>Štítky</li>
+    <li>Otázka dne</li>
+    <li>Politika</li>
+    <li>Evropská unie</li>
+</ul>
+
+<ul class="questionStatistic">
+    <li>Odpovědělo <span>20</span></li>
+    <li>Odpovědělo <span>20</span></li>
+    <li>Odpovědělo <span>20</span></li>
+    <li>Odpovědělo <span>20</span></li>
+</ul>
+
+<div class="separatorVertical"></div>
+
 <div id="question">
     <div class="question_of_day">
-        Co podle tebe představuje EU (Evropská unie)<br />
-        a co je jejím cílem ?
-        <div class="fade_answer_form">Odpovědět na otázku</div>
+        {$dayQuestion->question}
         {control answerForm}
     </div>
-    <div class="question_of_day_answer">
+</div>
 
+<div id="answers">
+    <div n:foreach="$answers as $answer" class="answer">
+        {$answer->answer}
+        <div class="votes"></div>
     </div>
 </div>
 {/block}

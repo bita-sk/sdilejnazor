@@ -11,32 +11,42 @@
     src: url('../fonts/Roboto-Light.ttf');
 }
 
+@font-face
+{
+    font-family: Raleway Lt;
+    src: url('../fonts/Raleway-Light.ttf');
+}
+
 *{
     margin: 0;
     padding: 0;
 }
 
 html{
-    background-repeat: no-repeat;
-    background-image: url('/images/wallpaper.jpg');
-    background-size: cover;
-    background-position-y: -22%;
+    /* background-repeat: no-repeat;
+     background-image: url('/images/wallpaper.jpg');
+     background-size: cover;
+     background-position-y: -22%;*/
 }
 
 header a{
+    float: left;
     text-decoration: none;
     color: white;
+    margin-left: 10px;
 }
 
 header{
-    position: fixed;
-    top:0;
+    z-index: -1;
+    float: left;
     width:100%;
     font-size: 30pt;
-    font-family: Raleway;
+    font-family: Raleway Lt;
     color: white;
-    background: #CCCC33;
-    padding:10px 10px 10px 10px;
+    background: #cccc00;
+    padding-top:10px;
+    padding-bottom: 10px;
+    height:48px;
 }
 
 header #menu{
@@ -59,17 +69,17 @@ header #menu li{
 
 #question{
     margin: 0 auto;
-    margin-top: 60px;
-    display: table;
+    width: 472px;
+    text-align: center;
+    z-index: 1;
+    padding-top: 15px;
+    padding-bottom: 20px;
 }
 
 .question_of_day{
     display: inline-block;
     text-align: center;
-    padding: 35px;
-    padding-bottom: 25px;
-    border: 2px solid #CCCC33;
-    color:black;
+    color:#333333;
     font-family: Roboto Lt;
     font-size: 17pt;
 }
@@ -92,14 +102,122 @@ header #menu li{
 }
 
 #frm-answerForm-answer{
-    width: 300px;
-    height: 80px;
+    width: 70vh;
+    height: 70px;
+    border:1px solid #CCCC33;
+    resize: none;
+    color:#333333;
 }
 
 #frm-answerForm input[type="submit"]{
-    border: none;
-    background: crimson;
+    border:1px solid #CCCC33;
+    background: #333333;
     color:white;
     padding: 8px;
     cursor: pointer;
+    font-family: Roboto Lt;
+    font-size: 14pt;
+    margin-top: 10px;
+}
+.separator{
+    margin: 0 auto;
+    display: table;
+    height: 1px;
+    width: 100%;
+    background: white;
+    margin-top: 70px;
+}
+
+.separatorVertical{
+    float: right;
+    margin-top: 35px;
+    height: 200px;
+    margin-right: 25px;
+    width: 1px;
+    background: white;
+}
+
+.questionStatistic{
+    float: right;
+    margin-top: 35px;
+    height: 160px;
+    padding-top: 40px;
+    margin-right: 55px;
+    display: none;
+}
+
+.questionStatistic li{
+    list-style-type: none;
+    margin-top: 8px;
+    font-family: Roboto Lt;
+    font-size: 13pt;
+    color:#333333;
+}
+
+.questionStatistic span{
+    color:#CCCC33;
+    font-weight: bold;
+}
+
+#tags{
+    float: left;
+    display: none;
+}
+
+#tags li{
+    cursor: pointer;
+    background: white;
+    color:#333333;
+    padding: 5px;
+    padding-left: 10px;
+    margin-top: 8px;
+    font-family: Roboto Lt;
+
+}
+
+
+#tags li:first-of-type{
+    cursor: auto;
+    color: white;
+    font-family: Roboto Lt;
+    font-size: 16pt;
+    border-bottom: 1px solid white;
+    padding-left: 10px;
+    margin-top: 15px;
+    width: 120px;
+    background: none;
+}
+
+.flash.info {
+    text-align: center;
+    background: #969d9e;
+    color: white;
+    font-weight: bold;
+}
+
+#answers{
+    float: left;
+    width: 100%;
+    text-align: center;
+}
+
+.answer{
+    font-family: Roboto;
+    margin: 10px;
+    padding: 15px;
+    width: 250px;
+    height: 80px;
+    word-break: break-all;
+    background: white;
+    color:#737373;
+    -webkit-box-shadow: 0 7px 4px #777;
+    -moz-box-shadow: 0 7px 4px #777;
+    box-shadow: 0 7px 4px #777;
+    border-radius: .2em;
+    border: 1px solid #E2C822;
+    -webkit-transition: border linear .2s, box-shadow linear .2s;
+    -moz-transition: border linear .2s, box-shadow linear .2s;
+    -o-transition: border linear .2s, box-shadow linear .2s;
+    transition: border linear .2s, box-shadow linear .2s;
+    display: inline-table;
 }
